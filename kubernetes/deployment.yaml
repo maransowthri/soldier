@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: soldier
+  name: soldier
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: soldier
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: soldier
+    spec:
+      containers:
+      - image: soldier:v1
+        name: soldier
+        resources: {}
