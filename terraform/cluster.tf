@@ -3,7 +3,10 @@ resource "aws_eks_cluster" "soldier" {
   role_arn = aws_iam_role.eksRole.arn
 
   vpc_config {
-    subnet_ids = [aws_subnet.example1.id, aws_subnet.example2.id]
+    subnet_ids = [
+      data.aws_subnets.subnets.ids[0],
+      data.aws_subnets.subnets.ids[1],
+    ]
   }
 
   depends_on = [
