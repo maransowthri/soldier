@@ -5,7 +5,7 @@ metadata:
     app: soldier
   name: soldier
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: soldier
@@ -15,6 +15,6 @@ spec:
         app: soldier
     spec:
       containers:
-      - image: soldier:v1
+      - image: maransowthri/soldier:v1
         name: soldier
         resources: {}

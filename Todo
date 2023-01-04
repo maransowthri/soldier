@@ -1,2 +1,0 @@
-- Push image to docker hub registry
-- Launch it from k8s
